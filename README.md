@@ -2,7 +2,7 @@
 
 Antep mutfağıyla kendi ocakbaşını işlettiğin 2D bir mobil restoran oyunu. Simit kebabını ızgarada, lahmacunu taş fırında pişirirsin; beyranı kazandan dağıtır, müşterinin sabrı tükenmeden siparişi tepsiyle önüne koyarsın. Gün sonunda kazandığınla dükkânı büyütürsün. On günü tamamlayan Antep'in en iyi ustası olur.
 
-**Tarayıcıda oyna:** https://mustafagulturk.github.io/ocakbasi/
+**Tarayıcıda oyna:** https://mustafagulturk.github.io/ocakbasi/\
 **Android:** [Sürümler](https://github.com/mustafagulturk/ocakbasi/releases) sayfasından `ocakbasi.apk` indirilip kurulabilir.
 
 <p>
