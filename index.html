@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#3b2416">
+  <meta name="description" content="Ocakbaşı: Antep usulü kebapçı işletme oyunu. Simit kebabı, lahmacun, beyran ve baklava hazırla, dükkânını büyüt.">
+  <title>Ocakbaşı · Antep Usulü</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    html, body { margin: 0; height: 100%; background: #2a170c; overflow: hidden; touch-action: none; -webkit-user-select: none; user-select: none; }
+    #oyun { position: fixed; inset: 0; }
+    #oyun canvas { display: block; margin: 0 auto; }
+    #yukleniyor { position: fixed; inset: 0; display: grid; place-items: center; color: #f6e7cf; font: 600 20px system-ui, sans-serif; }
+    /* İlk açılışta isim girme formu (oyun tuvalinin üstünde) */
+    #kayit { position: fixed; inset: 0; display: none; place-items: center; padding: 20px; background: rgb(42 23 12 / .55); }
+    #kayit.acik { display: grid; }
+    #kayit form { width: min(420px, 100%); box-sizing: border-box; padding: 26px 22px; border-radius: 22px; background: #fff8ec; color: #3b2416;
+      font-family: "Baloo 2", system-ui, sans-serif; box-shadow: 0 30px 60px -20px rgb(0 0 0 / .6); border: 4px solid #c8743a; }
+    #kayit h2 { margin: 0 0 4px; font-size: 28px; line-height: 1.1; }
+    #kayit p { margin: 0 0 16px; color: #7a5a44; font-size: 16px; line-height: 1.35; }
+    #kayit label { display: block; font-weight: 700; font-size: 16px; margin: 12px 0 6px; }
+    #kayit input { width: 100%; box-sizing: border-box; font: 600 19px "Baloo 2", system-ui, sans-serif; padding: 10px 14px; border-radius: 12px;
+      border: 2px solid #e2c9a6; background: #fff; color: #3b2416; outline: none; }
+    #kayit input:focus { border-color: #2a9d8f; }
+    #kayit small { display: block; min-height: 18px; color: #c0392b; font-size: 14px; margin-top: 4px; }
+    #kayit button { width: 100%; margin-top: 16px; padding: 12px; font: 800 21px "Baloo 2", system-ui, sans-serif; color: #fff; border: 0; border-radius: 14px;
+      background: #c8743a; box-shadow: 0 5px 0 #8d4a20; cursor: pointer; }
+    #kayit button:active { transform: translateY(3px); box-shadow: 0 2px 0 #8d4a20; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-DpQ_yOEm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-IPFs7XNN.css">
+</head>
+<body>
+  <div id="yukleniyor">Ocak yakılıyor…</div>
+  <div id="oyun"></div>
+  <div id="kayit" role="dialog" aria-labelledby="kayit-baslik">
+    <form autocomplete="off" novalidate>
+      <h2 id="kayit-baslik">Hoş geldin usta!</h2>
+      <p>Antep'te kendi ocakbaşını açıyorsun. Önce kendini tanıt, dükkânına da bir ad koy.</p>
+      <label for="kayit-ad">Adın</label>
+      <input id="kayit-ad" name="ad" maxlength="18" placeholder="Örn. Mustafa" required>
+      <label for="kayit-dukkan">Dükkânının adı</label>
+      <input id="kayit-dukkan" name="dukkan" maxlength="26" placeholder="Örn. Mustafa Usta Ocakbaşı" required>
+      <small id="kayit-hata" role="alert"></small>
+      <button type="submit">Dükkânı aç</button>
+    </form>
+  </div>
+</body>
+</html>
