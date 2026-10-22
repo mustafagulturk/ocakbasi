@@ -79,7 +79,7 @@ npx cap sync android
 npx cap open android   # Android Studio'da çalıştır
 ```
 
-GitHub Actions her yüklemede testleri çalıştırır, APK'yı derler, sunucunun Docker imajını dener ve web sürümünü GitHub Pages'e yayınlar. `v1.0.0` gibi bir etiket atıldığında APK, Sürümler sayfasına eklenir.
+GitHub Actions her yüklemede testleri çalıştırır, APK'yı derler, sunucunun Docker imajını dener ve web sürümünü GitHub Pages'e yayınlar. Actions sekmesinden CI elle çalıştırılıp sürüm adı (ör. `v1.0.1`) girildiğinde APK, Sürümler sayfasına eklenir.
 
 ## Kendin değiştirmek istersen
 
