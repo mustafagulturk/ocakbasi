@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ocakbaşı</string>
+    <string name="title_activity_main">Ocakbaşı</string>
+    <string name="package_name">dev.mustafagulturk.ocakbasi</string>
+    <string name="custom_url_scheme">dev.mustafagulturk.ocakbasi</string>
+</resources>

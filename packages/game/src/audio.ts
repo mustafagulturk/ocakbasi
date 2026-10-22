@@ -1,4 +1,6 @@
 /** Dosya gerektirmeyen küçük ses efektleri (Web Audio ile üretilir). */
+import { Capacitor } from "@capacitor/core";
+import { Haptics, ImpactStyle } from "@capacitor/haptics";
 import { save } from "./save";
 
 let ctx: AudioContext | null = null;
@@ -61,9 +63,11 @@ export const sfx = {
 };
 
 /** Telefonda kısa titreşim (destekleniyorsa). */
+/** Kısa titreşim. Telefon uygulamasında Capacitor'ın titreşim eklentisi, tarayıcıda navigator.vibrate kullanılır. */
 export function titret(ms = 15) {
   try {
-    navigator.vibrate?.(ms);
+    if (Capacitor.isNativePlatform()) void Haptics.impact({ style: ms > 30 ? ImpactStyle.Heavy : ImpactStyle.Light });
+    else navigator.vibrate?.(ms);
   } catch {
     // desteklenmiyor
   }
