@@ -1,0 +1,17 @@
+{
+  "name": "ocakbasi",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @ocakbasi/game",
+    "build": "npm run build -w @ocakbasi/core && npm run build -w @ocakbasi/game && npm run build -w @ocakbasi/server",
+    "test": "vitest run",
+    "typecheck": "tsc -p packages/core && tsc -p packages/game --noEmit && tsc -p packages/server --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.7"
+  }
+}
