@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": { "types": ["vite/client"], "noEmit": true, "paths": { "@ocakbasi/core": ["../core/src/index.ts"] }, "lib": ["ES2022", "DOM", "DOM.Iterable"] },
+  "include": ["src"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Ocakbaşı · Antep Usulü",
+  "short_name": "Ocakbaşı",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2a170c",
+  "theme_color": "#3b2416",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
