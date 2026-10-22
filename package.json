@@ -6,9 +6,10 @@
   ],
   "scripts": {
     "dev": "npm run dev -w @ocakbasi/game",
-    "build": "npm run build -w @ocakbasi/core && npm run build -w @ocakbasi/game && npm run build -w @ocakbasi/server",
+    "dev:server": "npm run dev -w @ocakbasi/server",
+    "build": "npm run build -w @ocakbasi/game",
     "test": "vitest run",
-    "typecheck": "tsc -p packages/core && tsc -p packages/game --noEmit && tsc -p packages/server --noEmit"
+    "typecheck": "tsc -p packages/core --noEmit && tsc -p packages/game && tsc -p packages/server"
   },
   "devDependencies": {
     "typescript": "^5.6.3",

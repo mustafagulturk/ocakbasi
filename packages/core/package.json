@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
-  "scripts": { "build": "tsc -p ." }
+  "description": "Oyun kuralları: hem oyunda hem sunucuda aynı kod çalışır. Derlenmeden, TypeScript kaynağı olarak kullanılır.",
+  "exports": { ".": "./src/index.ts" }
 }

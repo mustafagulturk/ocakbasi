@@ -1,0 +1,17 @@
+# Yerelde sunucu + veritabanı: docker compose up
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ocakbasi
+      POSTGRES_PASSWORD: ocakbasi
+      POSTGRES_DB: ocakbasi
+    volumes: [db:/var/lib/postgresql/data]
+  api:
+    build: { context: ., dockerfile: packages/server/Dockerfile }
+    environment:
+      DATABASE_URL: postgres://ocakbasi:ocakbasi@db:5432/ocakbasi
+    ports: ["3000:3000"]
+    depends_on: [db]
+volumes:
+  db:
