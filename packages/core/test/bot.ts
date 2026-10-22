@@ -17,7 +17,7 @@ function need(d: DayState): ProductId[] {
   });
 }
 
-function think(d: DayState, reaction: number): Action | null {
+export function think(d: DayState, reaction: number): Action | null {
   if (d.tick % reaction) return null;
   // 1) servis edilebilecek müşteri
   for (const [seat, c] of d.seats.entries()) {
