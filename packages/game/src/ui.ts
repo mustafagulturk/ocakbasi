@@ -76,6 +76,13 @@ export class Buton extends Phaser.GameObjects.Container {
     return this;
   }
 
+  setRenk(renk: number, golge: number) {
+    this.o.renk = renk;
+    this.o.golge = golge;
+    this.ciz(false);
+    return this;
+  }
+
   setMetin(m: string) {
     this.etiket.setText(m);
     return this;

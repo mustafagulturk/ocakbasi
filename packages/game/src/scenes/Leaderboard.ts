@@ -15,17 +15,25 @@ export class Leaderboard extends Phaser.Scene {
   }
 
   create() {
+    this.donem = "all";
     duvar(this, 0, H, 24);
     yazi(this, W / 2, 130, "Skor Tablosu", 60, CSS.koyu, 800);
     panel(this, 30, 250, W - 60, 820, RENK.krem2);
     if (online()) {
-      const sekme = (x: number, ad: string, d: "all" | "week") =>
-        new Buton(this, x, 200, ad, () => {
+      const sekmeler: [Buton, "all" | "week"][] = [];
+      const boya = () => sekmeler.forEach(([b, d]) => (d === this.donem ? b.setRenk(RENK.cini, RENK.ciniKoyu) : b.setRenk(0x6b4128, 0x3b2416)));
+      const sekme = (x: number, ad: string, d: "all" | "week") => {
+        const b = new Buton(this, x, 200, ad, () => {
+          if (this.donem === d) return;
           this.donem = d;
+          boya();
           void this.yukle();
-        }, { w: 220, h: 60, boyut: 24, renk: 0x6b4128, golge: 0x3b2416 });
+        }, { w: 220, h: 60, boyut: 24 });
+        sekmeler.push([b, d]);
+      };
       sekme(W / 2 - 120, "Tüm zamanlar", "all");
       sekme(W / 2 + 120, "Bu hafta", "week");
+      boya();
       void this.yukle();
     } else {
       yazi(this, W / 2, 200, "Bu cihazdaki en iyi oyunların", 26, CSS.soluk, 600);
